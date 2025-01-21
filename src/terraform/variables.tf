@@ -2,7 +2,7 @@ variable "application_name" {
     type = string
 }
 
-variable "enviroment_name" {
+variable "environment_name" {
     type = string
 }
 
