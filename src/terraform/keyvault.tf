@@ -10,7 +10,17 @@ resource "azurerm_key_vault" "main" {
   sku_name = "standard"
 }
 
-resource "azurerm_key_vault_access_policy" "terraform-principal" {
+resource "azurerm_key_vault_access_policy" "terraform-user" {
+  key_vault_id = azurerm_key_vault.main.id
+  tenant_id    = data.azurerm_client_config.current.tenant_id
+  object_id    = data.azurerm_client_config.current.object_id
+
+  key_permissions = [
+    "Backup", "Delete", "Get", "List", "Purge", "Recover", "Restore", "Set"
+  ]
+}
+
+resource "azurerm_key_vault_access_policy" "terraform-user" {
   key_vault_id = azurerm_key_vault.main.id
   tenant_id    = data.azurerm_client_config.current.tenant_id
   object_id    = azurerm_user_assigned_identity.functions.principal_id
