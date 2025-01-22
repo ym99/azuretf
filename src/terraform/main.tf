@@ -9,6 +9,6 @@ resource "random_string" "name" {
     upper = false
 }
 
-# data "azurerm-client-config" "current" {
+data "azurerm_client_config" "current" {
     
-# }
+}
