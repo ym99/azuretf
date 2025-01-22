@@ -92,11 +92,11 @@ jobs:
 
           resource_group_name=$(terraform output -raw resource_group_name)
           echo $resource_group_name
-          echo "resource_group_name=$resource_group_name" >> $GITHUB_OUPUT
+          echo "resource_group_name=$resource_group_name" >> "$GITHUB_OUPUT"
 
           function_name=$(terraform output -raw function_name)
           echo $function_name
-          echo "function_name=$function_name" >> $GITHUB_OUTPUT
+          echo "function_name=$function_name" >> "$GITHUB_OUTPUT"
 
   deploy:
     needs: [ terraform, build ]
