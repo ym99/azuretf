@@ -12,7 +12,6 @@ end:
 
 jobs:
   build:
-
     name: build-${{ matrix.os }}
     runs-on: ${{ matris.os }}
     steps:
