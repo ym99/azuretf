@@ -95,7 +95,6 @@ jobs:
 
           function_name=$(terraform output -raw function_name)
           echo "function_name=$function_name" >> "$GITHUB_OUTPUT"
-
   deploy:
     needs: [ terraform, build ]
     runs-on: ubuntu-latest
