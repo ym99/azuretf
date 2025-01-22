@@ -1,5 +1,5 @@
 resource "azurerm_storage_account" "functions" {
-  name                     = "st${random_string.name}"
+  name                     = "st${var.application_name}419${var.environment_name}"
   resource_group_name      = azurerm_resource_group.main.name
   location                 = azurerm_resource_group.main.location
   account_tier             = "Standard"
