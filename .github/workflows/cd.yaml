@@ -100,6 +100,7 @@ jobs:
           ls /home/runner/work/_temp/*  
           cat /home/runner/work/_temp/*.sh
           echo "END of debugging temp file"
+        
   deploy:
     needs: [ terraform, build ]
     runs-on: ubuntu-latest
