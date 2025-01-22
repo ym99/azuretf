@@ -12,8 +12,7 @@ end:
 
 jobs:
   build:
-    name: build-${{ matrix.os }}
-    runs-on: ${{ matris.os }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3
       - name: Setup .NET Core
