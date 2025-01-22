@@ -1,5 +1,5 @@
 resource "azurerm_storage_account" "functions" {
-  name                     = "st${var.application_name}419${var.environment_name}"
+  name                     = "st${var.application_name}${var.environment_name}${unique_suffix}"
   resource_group_name      = azurerm_resource_group.main.name
   location                 = azurerm_resource_group.main.location
   account_tier             = "Standard"
@@ -21,7 +21,7 @@ resource "azurerm_service_plan" "main" {
 }
 
 resource "azurerm_linux_function_app" "foo" {
-  name                = "func-${var.application_name}-${var.environment_name}-fn6712"
+  name                = "func-${var.application_name}-${var.environment_name}-fn${unique_suffix}"
   resource_group_name = azurerm_resource_group.main.name
   location            = azurerm_resource_group.main.location
 
