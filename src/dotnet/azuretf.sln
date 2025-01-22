@@ -1,10 +1,12 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72D-47B6-A68D-7590B98EB39B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet", ".\dotnet.csproj", "{35FBDBA1-307C-D567-8853-D7A8448A1769}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet", ".\GitHubCrawler\GitHubCrawler.csproj", "{35FBDBA1-307C-D567-8853-D7A8448A1769}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubCrawler.UnitTests", "GitHubCrawler.UnitTests\GitHubCrawler.UnitTests.csproj", "{E3E9ADF5-CE90-4C50-958F-1BE3999062B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,6 +18,10 @@ Global
 		{35FBDBA1-307C-D567-8853-D7A8448A1769}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35FBDBA1-307C-D567-8853-D7A8448A1769}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35FBDBA1-307C-D567-8853-D7A8448A1769}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3E9ADF5-CE90-4C50-958F-1BE3999062B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3E9ADF5-CE90-4C50-958F-1BE3999062B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3E9ADF5-CE90-4C50-958F-1BE3999062B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3E9ADF5-CE90-4C50-958F-1BE3999062B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

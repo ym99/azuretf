@@ -5,11 +5,11 @@ on:
   pull_request:
     branches: [ main ]
     paths:
-    - 'src/dotnet/GitHubCrawler/**'
+    - 'src/dotnet/**'
 
 env:
   DOTNET_VERSION: '6.0.401'
-  WORKING_DIRECTORY: ./src/dotnet/GitHubCrawler
+  WORKING_DIRECTORY: ./src/dotnet
 
 jobs:
   build:
