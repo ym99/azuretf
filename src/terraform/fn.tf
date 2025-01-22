@@ -1,10 +1,10 @@
-# resource "azurerm_storage_account" "functions" {
-#   name                     = "st${var.application_name}${var.environment_name}"
-#   resource_group_name      = azurerm_resource_group.main.name
-#   location                 = azurerm_resource_group.main.location
-#   account_tier             = "Standard"
-#   account_replication_type = "LRS"
-# }
+resource "azurerm_storage_account" "functions" {
+  name                     = "st${var.application_name}${var.environment_name}"
+  resource_group_name      = azurerm_resource_group.main.name
+  location                 = azurerm_resource_group.main.location
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+}
 
 # resource "azurerm_user_assigned_identity" "functions" {
 #   resource_group_name = azurerm_resource_group.main.name
