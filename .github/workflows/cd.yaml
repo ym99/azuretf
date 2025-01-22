@@ -42,7 +42,7 @@ jobs:
         run: dotnet publish ./GitHubCrawler/GitHubCrawler.csproj -c Release -o ./publish
         working-directory: ${{ env.DOTNET_WORKING_DIRECTORY }}
 
-      - name: Generate Deployemtn Package
+      - name: Generate Deployment Package
         run: |
           zip -r ../deployment.zip ./
         working-directory: ${{ env.DOTNET_WORKING_DIRECTORY }}/publish
@@ -91,11 +91,9 @@ jobs:
           terraform apply -auto-approve
 
           resource_group_name=$(terraform output -raw resource_group_name)
-          echo $resource_group_name
           echo "resource_group_name=$resource_group_name" >> "$GITHUB_OUPUT"
 
           function_name=$(terraform output -raw function_name)
-          echo $function_name
           echo "function_name=$function_name" >> "$GITHUB_OUTPUT"
 
   deploy:
@@ -114,7 +112,7 @@ jobs:
             ARM_TENANT_ID: ${{ vars.ARM_TENANT_ID }}
             ARM_CLIENT_ID: ${{ vars.ARM_CLIENT_ID }}
             ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
-            RESOURCE_GROUP_NAME: ${{ needs.terraform.outputs.resource_grou_name }}
+            RESOURCE_GROUP_NAME: ${{ needs.terraform.outputs.resource_group_name }}
             FUNCTION_NAME: ${{ needs.terraform.outputs.function_name }}
         run: |
           az login --service-princial -u $ARM_CLIENT_ID -p $ARM_CLIENT_SECRET --tenant $ARM_TENANT_ID
