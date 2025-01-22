@@ -21,7 +21,7 @@ resource "azurerm_service_plan" "main" {
 }
 
 resource "azurerm_linux_function_app" "foo" {
-  name                = "func-${var.application_name}-${var.environment_name}-foo"
+  name                = "func-${var.application_name}-${var.environment_name}-fn6712"
   resource_group_name = azurerm_resource_group.main.name
   location            = azurerm_resource_group.main.location
 
