@@ -2,10 +2,10 @@ name: ci
 
 on:
   push:
-  pull_request:
-    branches: [ main ]
+    branches:
+      - main
     paths:
-    - 'src/dotnet/**'
+      - src/dotnet/**
 
 env:
   DOTNET_VERSION: '6.0.401'
