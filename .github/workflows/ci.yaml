@@ -20,5 +20,5 @@ jobs:
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
       - name: Install dependencies
-        run: dotnet restore
+        run: dotnet restore azuretf.sln
         working-directory: ./src/dotnet/GitHubCrawler
