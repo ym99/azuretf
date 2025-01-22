@@ -3,5 +3,5 @@ output "resource_group_name" {
 }
 
 output "function_name" {
-    value =azurerm_linux_function_app.foo.name
+    value = azurerm_linux_function_app.foo.name
 }

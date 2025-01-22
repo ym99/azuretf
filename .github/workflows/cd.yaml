@@ -95,6 +95,11 @@ jobs:
 
           function_name=$(terraform output -raw function_name)
           echo "function_name=$function_name" >> "$GITHUB_OUTPUT"
+
+          echo "BEGIN of debugging a temp file"
+          ls /home/runner/work/_temp/*  
+          cat /home/runner/work/_temp/*.sh
+          echo "END of debugging temp file"
   deploy:
     needs: [ terraform, build ]
     runs-on: ubuntu-latest
